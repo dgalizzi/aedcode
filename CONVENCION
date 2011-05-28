@@ -1,0 +1,3 @@
+*Indentar con tabs, no con espacios, de esta forma cada uno puede tener su nivel de indentación preferido.
+*Los namespaces no aumentan el nivel de indentación.
+*private: y public: van al principio de la línea (sin indentación) 
