@@ -61,7 +61,7 @@ public:
 		cell *q = p.ptr->next;
 		p.ptr->next = q->next;
 		delete q;
-		return p;
+		return iterator(p.ptr->next);
 	}
 	iterator erase_after(iterator p,iterator q) {
 		assert(p.ptr->next != NULL);

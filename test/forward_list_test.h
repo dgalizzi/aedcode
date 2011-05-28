@@ -4,8 +4,6 @@
 #include "../src/include/forward_list.h"
 using aed::forward_list;
 
-#include "list.h"
-
 TEST_CASE("Forward list", "Probar la forward list")
 {
 	// Llenar la lista y pruebas varias
@@ -48,6 +46,14 @@ TEST_CASE("Forward list", "Probar la forward list")
 
 	fl.clear();
 	REQUIRE(fl.empty());
+
+	// erase_after(iterator)
+	fl.insert_after(fl.before_begin(), 1);
+	it1 = fl.insert_after(fl.before_begin(), 2);
+	fl.insert_after(fl.before_begin(), 3);
+	it2 = fl.erase_after(it1);
+	REQUIRE(it2 == fl.end());
+	REQUIRE(*it1 == 2);
 
 	// insert_after y erase_after returns
 	it1 = fl.insert_after(fl.before_begin(), 1);
