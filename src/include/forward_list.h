@@ -1,32 +1,33 @@
-#ifndef AED_LIST_H 
-#define AED_LIST_H
+#ifndef AED_FORWARD_LIST_H 
+#define AED_FORWARD_LIST_H
 
-#include <cstddef>	
-#include <iostream>  
+#include <cstddef>
+#include <assert.h>
+#include <iostream>
 
 namespace aed {
 
 template<class T>
-class list {
+class forward_list {
 public:
 	class iterator;
 private:
 	class cell {
-		friend class list;
+		friend class forward_list;
 		friend class iterator;
 		T t;
 		cell *next;
 		cell() : next(NULL) {}
 	};
-	cell *first, *last;
+	cell *first;
 public:
 	class iterator {
 	private:
-		friend class list;
+		friend class forward_list;
 		cell* ptr;
 	public:
-		T & operator*() { return ptr->next->t; }
-		T *operator->() { return &ptr->next->t; }
+		T & operator*() { return ptr->t; }
+		T *operator->() { return &ptr->t; }
 		bool operator!=(iterator q) { return ptr!=q.ptr; }
 		bool operator==(iterator q) { return ptr==q.ptr; }
 		iterator(cell *p=NULL) : ptr(p) {}
@@ -37,15 +38,15 @@ public:
 		}
 		// Postfix:
 		iterator operator++(int) {
+			assert(ptr != NULL);
 			iterator q = *this;
 			ptr = ptr->next;
 			return q;
 		}
 	}; // End class iterator
 
-	list() {
-		first = new cell;
-		last = first;
+	forward_list() {
+		first = new cell();
 	}
 	iterator insert_after(iterator p,T t) {
 		cell *q = p.ptr->next;
@@ -53,30 +54,33 @@ public:
 		p.ptr->next = c;
 		c->next = q;
 		c->t = t;
-		if (q==NULL) last = c;
-		return p;
+		return iterator(c);
 	}
 	iterator erase_after(iterator p) {
+		assert(p.ptr->next != NULL);
 		cell *q = p.ptr->next;
-		if (q==last) last = p.ptr;
 		p.ptr->next = q->next;
 		delete q;
 		return p;
 	}
 	iterator erase_after(iterator p,iterator q) {
+		assert(p.ptr->next != NULL);
 		cell *s, *r = p.ptr->next;
-		p.ptr->next = q.ptr->next;
-		if (!p.ptr->next) last = p.ptr;
-		while (r!=q.ptr->next) {
+		p.ptr->next = q.ptr;
+		while (r!=q.ptr) {
 			s = r->next;
 			delete r;
 			r = s;
 		}
-		return p;
+		return q;
 	}
-	void clear() { erase(begin(),end()); }
-	iterator begin() { return iterator(first); }
-	iterator end() { return iterator(last); }
+	void clear() { erase_after(before_begin(),end()); }
+	iterator begin() { return iterator(first->next) ; }
+	iterator before_begin() { return iterator(first); }
+	iterator end() { return iterator(); }
+	bool empty() { return begin() == end(); }
+
+	// Métodos no estándar
 	void print() {	 
 		iterator p = begin();
 		while (p!=end()) std::cout << *p++ << " ";
@@ -96,7 +100,11 @@ public:
 	int size() {
 		int sz = 0;
 		iterator p = begin();
-		while (p++!=end()) sz++;
+		while (p != end())
+		{
+			sz ++;
+			++p;
+		}
 		return sz;
 	}
 };

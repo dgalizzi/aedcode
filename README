@@ -1,1 +1,4 @@
-Clases en C++ de estructuras de datos básicas y ejemplos.
+Clases en C++ de estructuras de datos básicas, algunas que están en la STL, otras que están en el próximo estándar C++0x, y otras como árboles que no están.
+Las clases no contienen todo lo que la STL especifica, sino lo más básico para comprender el funcionamiento de la estructura. Particularmente, no se incluyen iteradores constantes.
+
+Además, se incluyen ejercicios resueltos. Los ejercicios se resolverán con la STL siempre que la estructura de datos requerida esté disponible, en caso contrario se utilizará la clase definida aquí.
