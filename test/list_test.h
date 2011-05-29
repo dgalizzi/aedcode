@@ -15,9 +15,16 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	REQUIRE(*it1++ == 2);
 	REQUIRE(*it1++ == 1);
 	REQUIRE(it1 == L.end());
-	REQUIRE(L.size() == 2);
 	list<int>::iterator it2 = L.insert(it1, 3);
 	REQUIRE(it1 == L.end());
 	REQUIRE(*it2++ == 3);
 	REQUIRE(it2 == it1);
+	REQUIRE(it2 == L.end());
+	REQUIRE(it1 == L.end());
+	it1 = L.begin();
+	REQUIRE(*L.begin() == 2);
+	REQUIRE(*it1++ == 2);
+	REQUIRE(*it1++ == 1);
+	REQUIRE(*it1++ == 3);
+	REQUIRE(it1 == L.end());
 }
