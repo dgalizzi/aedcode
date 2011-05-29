@@ -48,6 +48,10 @@ public:
 	forward_list() {
 		first = new cell();
 	}
+	~forward_list() { 
+		clear();
+		delete first;
+	}
 	iterator insert_after(iterator p,T t) {
 		cell *q = p.ptr->next;
 		cell *c = new cell;
