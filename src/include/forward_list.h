@@ -85,20 +85,6 @@ public:
 	bool empty() { return begin() == end(); }
 
 	// Métodos no estándar
-	void print() {	 
-		iterator p = begin();
-		while (p!=end()) std::cout << *p++ << " ";
-		std::cout << std::endl;
-	}
-	void printd() {
-		std::cout << "h(" << first << ")" << std::endl;
-		cell *c = first->next;
-		int j=0;
-		while (c!=NULL) { 
-			std::cout << j++ << "(" << c << ") :" << c->t << std::endl; 
-			c = c->next;
-		}
-	}
 
 	// Obtener la longitud de la lista. O(n).
 	int size() {
