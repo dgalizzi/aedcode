@@ -74,6 +74,10 @@ public:
 	T& back()  { return tail->prev->t ; }
 	bool empty() { return begin() == end(); }
 
+	void push_front(T data) { insert(begin(), data); }
+	void push_back(T data)  { insert(end(), data); }
+	void pop_front()        { erase(begin()); }
+	void pop_back()         { erase(iterator(tail->prev)); }
 	iterator insert(iterator p, T data) {
 		cell *c;
 		if (empty()) {

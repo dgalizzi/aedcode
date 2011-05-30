@@ -81,4 +81,13 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	L.front() = 0;
 	REQUIRE(L.front() == 0);
 	REQUIRE(*L.begin() == 0);
+
+	L.pop_back();
+	REQUIRE(L.back() == 5);
+	L.pop_front();
+	REQUIRE(L.front() == 2);
+	L.push_front(1);
+	REQUIRE(L.front() == 1);
+	L.push_back(7);
+	REQUIRE(L.back() == 7);
 }
