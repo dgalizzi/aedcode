@@ -45,4 +45,26 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	it1 = L.erase(L.begin());
 	REQUIRE(it1 == L.end());
 	REQUIRE(L.empty());
+
+	// L = []
+	for (int i = 1 ; i <= 6 ; i ++)
+		L.insert(L.end(), i);
+
+	it1 = L.begin();
+	REQUIRE(*it1++ == 1);
+	REQUIRE(*it1++ == 2);
+	REQUIRE(*it1 == 3);
+	it2 = it1;
+	++ it2; // 4
+	++ it2; // 5
+	it1 = L.erase(it1, it2);
+	REQUIRE(*it1++ == 5);
+	REQUIRE(*it1++ == 6);
+	REQUIRE(it1 == L.end());
+	REQUIRE(*L.begin() == 1);
+	it1 = L.begin();
+	++ it1;
+	REQUIRE(*it1++ == 2);
+	REQUIRE(*it1++ == 5);
+	REQUIRE(*it1++ == 6);
 }

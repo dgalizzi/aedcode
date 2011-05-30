@@ -98,6 +98,12 @@ public:
 		return c;
 	}
 
+	iterator erase(iterator p, iterator q) {
+		while (p != q)
+			p = erase(p);
+		return p;
+	}
+
 	// TODO: erase(p, q), clear(), destructor
 };
 
