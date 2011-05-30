@@ -85,7 +85,20 @@ public:
 		return iterator(c);
 	}
 
-	// TODO: erase(p), erase(p, q), clear(), destructor
+	iterator erase(iterator p) {
+		assert(p != end());
+		if (p.ptr != head)
+			p.ptr->prev->next = p.ptr->next;
+		else
+			head = p.ptr->next;
+		p.ptr->next->prev = p.ptr->prev;
+		iterator c = iterator(p.ptr->next);
+		delete p.ptr;
+
+		return c;
+	}
+
+	// TODO: erase(p, q), clear(), destructor
 };
 
 }
