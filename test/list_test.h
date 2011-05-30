@@ -49,6 +49,7 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	// L = []
 	for (int i = 1 ; i <= 6 ; i ++)
 		L.insert(L.end(), i);
+	// L = [1, 2, 3, 4, 5, 6]
 
 	it1 = L.begin();
 	REQUIRE(*it1++ == 1);
