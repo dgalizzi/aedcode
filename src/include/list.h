@@ -70,6 +70,8 @@ public:
 
 	iterator begin() { return iterator(head); }
 	iterator end()   { return iterator(tail); }
+	T& front() { return head->t; }
+	T& back()  { return tail->prev->t ; }
 	bool empty() { return begin() == end(); }
 
 	iterator insert(iterator p, T data) {
