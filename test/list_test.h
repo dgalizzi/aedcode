@@ -5,7 +5,7 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	using aed::list;
 	list<int> L;
 
-	// Inserts
+	// Inserts, ++, --
 	REQUIRE(L.empty());
 	L.insert(L.begin(), 1);
 	REQUIRE(*L.begin() == 1);
@@ -26,5 +26,23 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	REQUIRE(*it1++ == 2);
 	REQUIRE(*it1++ == 1);
 	REQUIRE(*it1++ == 3);
+	REQUIRE(it1-- == L.end());
+	REQUIRE(*it1-- == 3);
+	REQUIRE(*it1-- == 1);
+	REQUIRE(*it1-- == 2);
+
+	// L = [2, 1, 3]
+
+	// Erase
+	it1 = L.begin();
+	REQUIRE(*L.begin() == 2);
+	it1 = L.erase(it1); // [1, 3]
+	REQUIRE(*it1++ == 1);
+	REQUIRE(*it1   == 3);
+	it1 = L.erase(it1);
 	REQUIRE(it1 == L.end());
+	REQUIRE(*L.begin() == 1);
+	it1 = L.erase(L.begin());
+	REQUIRE(it1 == L.end());
+	REQUIRE(L.empty());
 }
