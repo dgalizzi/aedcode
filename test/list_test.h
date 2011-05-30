@@ -68,4 +68,6 @@ TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 	REQUIRE(*it1++ == 2);
 	REQUIRE(*it1++ == 5);
 	REQUIRE(*it1++ == 6);
+	L.erase(L.begin(), L.end());
+	REQUIRE(L.empty());
 }

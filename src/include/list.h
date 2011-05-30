@@ -63,6 +63,11 @@ public:
 		tail = new cell(); // placeholder
 		head = tail;
 	}
+	~list() { 
+		clear();
+		delete tail;
+	}
+
 	iterator begin() { return iterator(head); }
 	iterator end()   { return iterator(tail); }
 	bool empty() { return begin() == end(); }
@@ -104,7 +109,9 @@ public:
 		return p;
 	}
 
-	// TODO: erase(p, q), clear(), destructor
+	void clear() {
+		erase(begin(), end());
+	}
 };
 
 }
