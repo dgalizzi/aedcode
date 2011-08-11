@@ -1,9 +1,9 @@
 Ejercicios.pdf: generate.lua
-	lua generate.lua > ejercicios.tex
-	pdflatex ejercicios.tex
-	rm ejercicios.tex ejercicios.log ejercicios.aux
+	lua generate.lua > Ejercicios.tex
+	pdflatex Ejercicios.tex
+	rm Ejercicios.tex Ejercicios.log Ejercicios.aux
 
 .PHONY: clean
 
 clean:
-	rm ejercicios.pdf
+	rm Ejercicios.pdf
