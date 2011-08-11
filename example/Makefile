@@ -1,3 +1,8 @@
+all: junta orden_nivel
+
+junta: util.o junta.cpp
+	g++ $^ -o bin/junta.out
+
 orden_nivel: util.o util_tree.o orden_nivel.cpp
 	g++ $^ -o bin/orden_nivel.out
 
