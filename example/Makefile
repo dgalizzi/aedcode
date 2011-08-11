@@ -6,3 +6,8 @@ util.o: util.h util.cpp
 
 util_tree.o: util_tree.h util_tree.cpp
 	g++ -c util_tree.cpp
+
+.PHONY: clean
+
+clean:
+	rm *.o bin/*.out
