@@ -1,0 +1,9 @@
+En este directorio se encuentran las clases enseñadas en la cátedra.
+
+A continuación una lista de los archivos que hay en este directorio, con una breve descripción de que es cada uno.
+
+list.h: Lista simplemente enlazada enseñada en la cátedra.
+
+forward_list.h: Lista simplemente enlazada igual a la lista simplemente enlazada propuesta por el nuevo estándar de C++ (C++0x).
+
+list_doble.h: Lista doblemente enlazada, similar a la std::list de la biblioteca estándar.
