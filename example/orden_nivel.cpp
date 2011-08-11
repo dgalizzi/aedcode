@@ -6,7 +6,7 @@
   todos los de profundidad 2, y asi sucesivamente. Los nodos que
   est\'en en la misma profundidad se listan en orden de izquierda a
   derecha.  Escribir una funci\'on 
-  {\tt void orden_de_nivel (tree <int> &t)} para listar los nodos 
+  {\tt void orden_de_nivel (tree <int> \&t)} para listar los nodos 
   de un \'arbol en orden de nivel. 
   keywords: arbol orientado
   

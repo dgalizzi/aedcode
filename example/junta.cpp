@@ -3,7 +3,7 @@
 /*
   COMIENZO DE DESCRIPCION
 
-  Escribir una funci\'on {\tt void junta (list <int> &L, int n)}
+  Escribir una funci\'on {\tt void junta (list <int> \&L, int n)}
   que, dada una lista {\tt L}, agrupa de a {\tt n} elementos
   dejando su suma IN PLACE. Por ejemplo, si la lista {\tt L} 
   contiene L=(1,3,2,4,5,2,2,3,5,7,4,3,2,2), entonces depu\'es de

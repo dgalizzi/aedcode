@@ -4,7 +4,7 @@
   COMIENZO DE DESCRIPCION
 
   Usando las operaciones del TAD lista, escribir una funci\'on 
-  {\tt void random_shuffle (list <int> &L)} que, dada una lista 
+  {\tt void random_shuffle (list <int> \&L)} que, dada una lista 
   de enteros {\tt L}, reordena sus elementos en forma aleatoria.  
   Se sugiere el siguiente algoritmo: usando una lista auxiliar 
   {\tt Q} se van generando n\'umeros enteros desde 0 a 
