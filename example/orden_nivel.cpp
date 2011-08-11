@@ -32,8 +32,7 @@
 using namespace aed;
 using namespace std;
 
-// -------------------------------------------------------------------
-// También conocido como "recorrido a lo ancho"
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 void orden_de_nivel(tree<int> &t) {
   queue <node_t> q;
   node_t  n,n1,c;
@@ -52,6 +51,7 @@ void orden_de_nivel(tree<int> &t) {
     }
   }
 }
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // -------------------------------------------------------------------
 int main () {
