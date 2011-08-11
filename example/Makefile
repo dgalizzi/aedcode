@@ -1,7 +1,10 @@
-all: junta orden_nivel random_shuffle intercala
+all: junta orden_nivel random_shuffle intercala creciente
 
 junta: util.o junta.cpp
 	g++ $^ -o bin/junta.out
+
+creciente: util.o creciente.cpp
+	g++ $^ -o bin/creciente.out
 
 intercala: util.o intercala.cpp
 	g++ $^ -o bin/intercala.out
