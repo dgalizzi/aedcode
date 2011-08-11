@@ -1,3 +1,6 @@
+#ifndef AED_LIST_DOBLE
+#define AED_LIST_DOBLE
+
 // Lista doblemente enlazada
 namespace aed {
 
@@ -205,3 +208,5 @@ public:
 };
 
 }
+
+#endif
