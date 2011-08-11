@@ -2,7 +2,7 @@
 /*
   COMIENZO DE DESCRIPCION
 
-  Escribir una funci\'on {\tt void ordenag (list <int> &l, int m)} 
+  Escribir una funci\'on {\tt void ordenag (list <int> \&l, int m)} 
   que, dada una lista {\tt l}, va ordenando sus elementos de a grupos 
   de {\tt m} elementos. Por ejemplo si m=5, entonces {\tt ordenag} 
   ordena los primeros 5 elementos entre si, despues los siguientes 
@@ -68,12 +68,12 @@ void  ordenag (list<int> &L,int m) {
 // -----------------------------------------------------------------
 int main () {
   list<int> L;
-  int n=10;
+  int n=3;
   int m= 5;
   cout << endl;
   for (int i=0;i<n;i++) {
     L.clear ();
-    randl (L,10,3.0);
+    randl (L, 10, 3.0, 5);
     cout << "Antes de ordenar  : ";
     printl (L);
     ordenag (L, m);

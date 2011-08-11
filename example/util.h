@@ -37,6 +37,12 @@ void randl(std::list<int> &l,int m=10,int n=20);
 void randl(std::list<int> &l,int m=10,double n=20.0);
 
 // -----------------------------------------------------------------
+// Genera una lista L de longitud promedio N
+// con elementos aleatorios en el rango [0, M-1].
+// Asegurando que la lista contenga al menos min_n elementos.
+void randl(std::list<int> &l, int m, double n, int min_n);
+
+// -----------------------------------------------------------------
 // Inserta elementos del vector v en la lista l en la posicion p. 
 // Se detiene cuando encuentra el elemento term en v.
 // Util para generar listas de la siguiente forma:
