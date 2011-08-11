@@ -7,8 +7,8 @@
 */
 // -----------------------------------------------------------------
 #include <cstdarg>
-#include "./tree.h"
-#include "./util_tree.h"
+#include "../include/tree.h"
+#include "util_tree.h"
 
 using namespace std;
 

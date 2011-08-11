@@ -1,0 +1,3 @@
+#define DOCVERSION "aed-2.0.3-14-g3b83b85"
+#define DOCDATE "Tue Oct 7 09:42:26 2008 -0300"
+#define PROCESSEDDATE "Wed Oct  8 09:05:16 2008 -0300"

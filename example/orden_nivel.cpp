@@ -25,14 +25,15 @@
 // -------------------------------------------------------------------
 #include <iostream>
 #include <queue>
-#include "./tree.h"
-#include "./util.h"
-#include "./util_tree.h"
+#include "../include/tree.h"
+#include "util.h"
+#include "util_tree.h"
 
 using namespace aed;
 using namespace std;
 
 // -------------------------------------------------------------------
+// También conocido como "recorrido a lo ancho"
 void orden_de_nivel(tree<int> &t) {
   queue <node_t> q;
   node_t  n,n1,c;
@@ -55,7 +56,7 @@ void orden_de_nivel(tree<int> &t) {
 // -------------------------------------------------------------------
 int main () {
   tree<int> t;
-  for (int j=0;j<5;j++) {
+  for (int j=0;j<1;j++) {
     t.clear();
     make_random_tree(t,10,2);
     cout << "Arbol inicial: "<< endl;
