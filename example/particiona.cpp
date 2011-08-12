@@ -4,7 +4,7 @@
   COMIENZO DE DESCRIPCION
 
   Usando las operaciones del TAD lista, escribir una funci\'on
-  {\tt void particiona (list<int> &L, int a)} la cual, dada una lista 
+  {\tt void particiona (list<int> \&L, int a)} la cual, dada una lista 
   de enteros {\tt L}, reemplace aquellos que son mayores que {\tt a}
   por una sucesi\'on de elementos menores o iguales que {\tt a} 
   pero manteniendo la suma total constante.

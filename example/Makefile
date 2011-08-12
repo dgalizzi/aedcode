@@ -1,7 +1,13 @@
-all: junta orden_nivel random_shuffle intercala creciente ordenag
+all: junta orden_nivel random_shuffle intercala creciente ordenag cumsum cum_sum_cola particiona listarbo bilistado
 
 junta: util.o junta.cpp
 	g++ $^ -o bin/junta.out
+
+particiona: util.o particiona.cpp
+	g++ $^ -o bin/particiona.out
+
+cum_sum_cola: util.o cum_sum_cola.cpp
+	g++ $^ -o bin/cum_sum_cola.out
 
 ordenag: util.o ordenag.cpp
 	g++ $^ -o bin/ordenag.out
@@ -17,6 +23,15 @@ random_shuffle: util.o random_shuffle.cpp
 
 orden_nivel: util.o util_tree.o orden_nivel.cpp
 	g++ $^ -o bin/orden_nivel.out
+
+cumsum: util.o util_tree.o cumsum.cpp
+	g++ $^ -o bin/cumsum.out
+
+listarbo: util.o util_tree.o listarbo.cpp
+	g++ $^ -o bin/listarbo.out
+
+bilistado: util.o util_tree.o bilistado.cpp
+	g++ $^ -o bin/bilistado.out
 
 util.o: util.h util.cpp
 	g++ -c util.cpp

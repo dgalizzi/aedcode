@@ -2,6 +2,7 @@
 /* COMIENZO DE DESCRIPCION
 
   Listado de \'arboles orientados en diferentes ordenes.
+  Orden previo, posterior y sim\'etrico.
   keywords: arbol orientado
 
   FIN DE DESCRIPCION */
@@ -18,9 +19,9 @@
 //
 // -------------------------------------------------------------------
 #include <iostream>
-#include "./util.h"
-#include "./tree.h"
-#include "./util_tree.h"
+#include "util.h"
+#include "../include/tree.h"
+#include "util_tree.h"
 
 using namespace aed;
 using namespace std;

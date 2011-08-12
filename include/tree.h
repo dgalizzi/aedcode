@@ -150,6 +150,57 @@ public:
 	iterator begin() { return iterator(header->left_child,NULL,header); }
 	iterator end() { return iterator(); }
 
+	////////////////////////////////////////////////////////////////
+	// Métodos auxiliares
+	// -------------------------------------------------------------
+	void print_prev(iterator p) { 
+		if (p==end()) return;
+		cout << "(" << p.ptr << "," << p.ptr->t << ")" << endl;
+		iterator c = p.lchild();
+		while (c!=end()) print_prev(c++);
+	}
+	// -------------------------------------------------------------
+	void print_prev() { print_prev(begin()); }
+	// -------------------------------------------------------------
+	void print_post(iterator p) { 
+		if (p==end()) return;
+		iterator c = p.lchild();
+		while (c!=end()) print_post(c++);
+		cout << "(" << p.ptr << "," << p.ptr->t << ")" << endl;
+	}
+	// -------------------------------------------------------------
+	void print_post() { print_post(begin()); }
+	// -------------------------------------------------------------
+	void lisp_print(iterator n) {
+		if (n==end()) return;
+		iterator c = n.lchild();
+		bool is_leaf = c==end();
+		if (is_leaf) cout << *n;
+		else {
+			cout << "(" << *n;
+			while (c!=end()) {
+				cout << " ";
+				lisp_print(c++);
+			}
+			cout << ")";
+		}
+	}
+	// -------------------------------------------------------------
+	void lisp_print() { lisp_print(begin()); }
+	//---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>
+	bool empty() { return begin()==end(); }
+	//---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>
+	int size(iterator n) {
+		int count=1;
+		iterator c = n.lchild();
+		while (c!=end()) 
+			count += size(c++);
+		return count;
+	}
+	//---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>
+	int size() {
+		if (!empty()) return size(begin());
+	}
 };
 
 template<class T>

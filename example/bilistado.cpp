@@ -35,9 +35,9 @@ Keywords: arbol orientado
 //
 // -------------------------------------------------------------------
 #include <iostream>
-#include "./util.h"
-#include "./tree.h"
-#include "./util_tree.h"
+#include "util.h"
+#include "../include/tree.h"
+#include "util_tree.h"
 
 using namespace aed;
 using namespace std;

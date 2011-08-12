@@ -40,14 +40,16 @@ for f in handle:lines() do
 					pr = true
 				end
 			end
-			filename_underscore_hacked = f:gsub("_", "\\_")
-			print()
-			for i=1, #keys do
-				if body[keys[i]] == nil then
-					body[keys[i]] = {}
+			if not descr:match(".*WIKI.*") then
+				filename_underscore_hacked = f:gsub("_", "\\_")
+				for i=1, #keys do
+					if body[keys[i]] == nil then
+						body[keys[i]] = {}
+					end
+					-- MADNESS
+					body[keys[i]][#body[keys[i]]+1]  = descr
+					body[keys[i]][#body[keys[i]]+1]  = filename_underscore_hacked
 				end
-				body[keys[i]][#body[keys[i]]+1]  = descr
-				body[keys[i]][#body[keys[i]]+1]  = filename_underscore_hacked
 			end
 			file:close()
 		end
@@ -60,7 +62,7 @@ for k,v in pairs(body) do
 	print("\\section*{" .. k .. "}")
 	n = 1
 	while n <= #v do
-		ejemplon = "\\paragraph{Ejercicio " ..  n .. "}"
+		ejemplon = "\\paragraph{Ejercicio " ..  (n+1)/2 .. "}"
 		print(ejemplon)
 		print(v[n])
 		print("Resuelto en el archivo {\\tt " .. v[n+1] .. "}")
