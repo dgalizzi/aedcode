@@ -2,7 +2,8 @@
 /*
   COMIENZO DE DESCRIPCION
 
-  Verifica si los elementos de `L2' estan en `L1' (en el mismo orden,
+  Implemente una funci\'on {\tt encuentra(list<int> \&L1, list<int> \&L2, 
+  list<int> \&indx)} que verifica si los elementos de `L2' estan en `L1' (en el mismo orden,
   pero no necesariamente en forma consecutiva). Si es asi, retorna
   true y en `indx' retorna los indices de los elementos de `L1' que
   corresponden a los elementos de `L2'. 
@@ -50,7 +51,7 @@ int main() {
   else cout << "L1 no contiene a L2!!!!\n";
 
   // Aplica a listas aleatorias
-  for (int j=0; j<100; j++) {
+  for (int j=0; j<5; j++) {
     // genera listas aleatorias de longitud media 20 (L1)
     // y 3 (L2)
     L1.clear();

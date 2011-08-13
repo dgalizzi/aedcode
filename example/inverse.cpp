@@ -2,19 +2,18 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
-   Dada una correspondencia #M# y asumiendo que es
-   _invertible_ o _biunivoca_ (esto es, todos
+   Dada una correspondencia {\tt M} y asumiendo que es
+   invertible o biunivoca (esto es, todos
    los valores del contradominio son distintos), la
-   correspondencia `inversa' #N# es aquella
-   tal que, si #y=M[x]#, entonces #x=N[y]#. Por
-   ejemplo, si #M={(0,1),(1,2),(2,0)}#, entonces la
-   inversa es #N={(1,0),(2,1,(0,2))}#. _Consigna:_
+   correspondencia `inversa' {\tt N } es aquella
+   tal que, si {\tt y=M[x]}, entonces {\tt x=N[y]}. Por
+   ejemplo, si {\tt M={(0,1),(1,2),(2,0)}}, entonces la
+   inversa es {\tt N={(1,0),(2,1,(0,2))}}. Consigna:
    Escribir una funci\'on 
-   #bool inverse(map<int,int> &M,map<int,int> &N)# 
-   tal que, si #M# es invertible,
-   entonces retorna true y #N# es su inversa. En caso
-   contrario retorna falso y #N# es la correspondencia
+   {\tt bool inverse(map<int,int> \&M,map<int,int> \&N)}
+   tal que, si {\tt M} es invertible,
+   entonces retorna true y {\tt N} es su inversa. En caso
+   contrario retorna falso y {\tt N} es la correspondencia
    `vacia' (sin asignaciones)
    [Tomado en el 1er parcial del 20/4/2006].
    keywords: lista, correspondencia

@@ -5,7 +5,7 @@
 
   Dada una lista de enteros {\tt L} y dos listas {\tt SEQ} y 
   {\tt REEMP} escribir una funci\'on {\tt 
-  void reemplaza (list<int> &L, list<int> &SEQ, list<int> &REEMP)}  
+  void reemplaza (list<int> \&L, list<int> \&SEQ, list<int> \&REEMP)}  
   que busca todas las secuencias de {\tt SEQ} en {\tt L} y las 
   reemplaza por {\tt REEMP}. Por ejemplo, si 
   L=(1 2 3 4 5 1 2 3 4 5 1 2 3 4 5), SEQ=(4 5 1) y REEMP=(9 7 3), 

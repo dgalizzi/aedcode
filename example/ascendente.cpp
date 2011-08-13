@@ -2,6 +2,31 @@
 
 /* COMIENZO DE DESCRIPCION 
 
+ En ciertas aplicaciones interesa separar las corridas ascendentes 
+ en una lista de n\'umeros $L=~(~a_1,~a_2,~...,~a_n~)$, donde 
+ cada corrida ascendente es una sublista de n\'umeros consecutivos 
+ $a_i$, $a_{i+1}$, ..., $a_{i+k}$, la cual termina cuando 
+ $a_{i+k}>a_{i+k+1}$, y es ascendente en el sentido de que 
+ $a_i \le a_{i+1} \le ... \le a_{i+k}$. Por ejemplo, si la 
+ lista es L = (0,5,6,9,4,3,9,6,5,5,2,3,7), entonces hay 6 
+ corridas ascendentes, a saber: (0,5,6,9), (4), (3,9), (6), 
+ (5,5) y (2,3,7). 
+ \emph{Consigna:}
+ usando las operaciones de la clase lista, escribir una funci\'on
+ {\tt int ascendente (list <int> \&L, list < list<int> > \&LL)}
+ en la cual, dada una lista de enteros {\tt L}, almacena 
+ cada corrida ascendente como una sublista en la lista de 
+ listas {\tt LL}, devolviendo adem\'as el n\'umero $z$ de 
+ corridas ascendentes halladas. \emph{Restricciones:} 
+ a) El tiempo de ejecuci\'on del algoritmo debe ser $O(n)$, 
+ b) La lista de listas {\tt LL} inicialmente est\'a vac\'{\i}a, 
+ c) No usar otras estructuras auxiliares.
+
+  [Tomado en Examen Final 29-JUL-2004].
+  keywords: lista
+  FIN DE DESCRIPCION */
+
+/*
   __USE_WIKI__
 
   Escribir una funci\'on 
@@ -14,30 +39,6 @@
   #int ascendente2 (list <int> &L, vector < list<int> > &VL)#
   que, dada una lista #L#, genera un vector de listas #VL# 
   de tal forma de que cada sublista es ascendente.
-  [Tomado en Examen Final 29-JUL-2004].
-  keywords: lista
-  FIN DE DESCRIPCION */
-
-/*
- En ciertas aplicaciones interesa separar las corridas ascendentes 
- en una lista de n\'umeros $L=~(~a_1,~a_2,~...,~a_n~)$, donde 
- cada corrida ascendente es una sublista de n\'umeros consecutivos 
- $a_i$, $a_{i+1}$, ..., $a_{i+k}$, la cual termina cuando 
- $a_{i+k}>a_{i+k+1}$, y es ascendente en el sentido de que 
- $a_i \le a_{i+1} \le ... \le a_{i+k}$. Por ejemplo, si la 
- lista es L = (0,5,6,9,4,3,9,6,5,5,2,3,7), entonces hay 6 
- corridas ascendentes, a saber: (0,5,6,9), (4), (3,9), (6), 
- (5,5) y (2,3,7). 
- \emph{Consigna:}
- usando las operaciones de la clase lista, escribir una funci\'on
- {\tt int ascendente (list <int> &L, list < list<int> > &LL)}
- en la cual, dada una lista de enteros {\tt L}, almacena 
- cada corrida ascendente como una sublista en la lista de 
- listas {\tt LL}, devolviendo adem\'as el n\'umero $z$ de 
- corridas ascendentes halladas. \emph{Restricciones:} 
- a) El tiempo de ejecuci\'on del algoritmo debe ser $O(n)$, 
- b) La lista de listas {\tt LL} inicialmente est\'a vac\'{\i}a, 
- c) No usar otras estructuras auxiliares.
 */
 
 // -----------------------------------------------------------------

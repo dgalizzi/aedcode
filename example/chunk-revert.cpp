@@ -3,17 +3,16 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
   Escribir una funci\'on 
-  #void chunk_revert(list<int> &L,int n);# que
-  dada una lista #L# y un entero #n#, 
-  invierte los elementos de la lista tomados de a #n#. 
-  Si la longitud de la lista no es m\'ultiplo de #n# 
+  {\tt void chunk_revert(list<int> \&L,int n);} que
+  dada una lista {\tt L} y un entero {\tt n}, 
+  invierte los elementos de la lista tomados de a {\tt n}. 
+  Si la longitud de la lista no es m\'ultiplo de {\tt n} 
   entonces se invierte el resto tambi\'en. 
-  Por ejemplo, si #L={1,3,2,5,4,6,2,7}#
-  entonces despu\'es de hacer #chunk_revert(L,3)# debe 
-  quedar #L={2,3,1,6,4,5,7,2}#.
-  _Restricciones:_ Usar a lo sumo una estructura auxiliar.
+  Por ejemplo, si {\tt L={1,3,2,5,4,6,2,7}}
+  entonces despu\'es de hacer {\tt chunk_revert(L,3)} debe 
+  quedar {\tt L={2,3,1,6,4,5,7,2}}.
+  Restricciones: Usar a lo sumo una estructura auxiliar.
   (En tal caso debe ser lista, pila o cola). 
    [Tomado en el 1er parcial 21/4/2005]. 
    keywords: lista

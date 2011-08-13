@@ -4,13 +4,13 @@
   COMIENZO DE DESCRIPCION
 
   (a) Escriba una funci\'on
-  void refina (list<double> &L, double delta) tal que dada una 
+  {\tt void refina (list<double> \&L, double delta)} tal que dada una 
   lista inicial de reales clasificados de menor a mayor {\tt L}, 
   refina inserta elementos entre los de {\tt L}, de tal modo que 
   la diferencia m\'axima entre elementos de la lista final
   sea menor o igual que delta;
   (b) Escriba una funci\'on
-  void desrefina (list<double> &L, double delta) tal que dada 
+  {\tt void desrefina (list<double> \&L, double delta)} tal que dada 
   una lista inicial de reales clasificados de menor a mayor
   {\tt L}, desrefina suprime elementos de {\tt L}, de tal modo 
   que la diferencia minima entre elementos de la lista final

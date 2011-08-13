@@ -3,13 +3,12 @@
 /* 
    COMIENZO DE DESCRIPCION 
    
-   __USE_WIKI__
-   Dos corresponencias #M1# y #M2# son inversas una 
+   Dos corresponencias {\tt M1} y {\tt M2} son inversas una 
    de la otra si tienen el mismo numero de asignaciones y 
-   para cada par de asignacion #x->y# en #M1# existe 
-   el par #y->x# en #M2#. Escribir una funcion predicado
-   #bool areinverse(map<int,int> &M1,map<int,int> &M2);# que
-   determina si las correspondencias #M1#, #M2# son una la 
+   para cada par de asignacion {\tt x->y} en {\tt M1} existe 
+   el par {\tt y->x} en {\tt M2}. Escribir una funcion predicado
+   {\tt bool areinverse(map<int,int> \&M1,map<int,int> \&M2);} que
+   determina si las correspondencias {\tt M1}, {\tt M2} son una la 
    inversa de la otra o no. 
    [Tomado en Primer Parcial 17-SET-2009].
    keywords: correspondencia, lista

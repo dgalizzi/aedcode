@@ -2,25 +2,6 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-  __USE_WIKI__
-  Coloquemos #n# n\'umeros enteros positivos alrededor de una 
-  circunferencia inicial. Construyamos ahora sucesivas 
-  circunferencias conc\'entricas {\it hacia el exterior}, de igual 
-  cantidad de elementos, los cuales son obtenidos restando (en valor 
-  absoluto) pares consecutivos de la \'ultima circunferencia 
-  exterior. 
-  Entonces, dada una lista #L = [ x_0, x_1, ..., x_{n-1} ]# de #n#
-  n\'umeros enteros que representan los valores iniciales alrededor de
-  la circunferencia inicial, escribir una funci\'on 
-  #int circulo(list<int> &L);# 
-  que ejecuta esta tarea y devuelva adem\'as
-  el n\'umero de circunferencias iteradas #p#
-  [Tomado en el 1er parcial del 21/4/2005].
-  keywords: lista
-
-   FIN DE DESCRIPCION */
-
-/* 
   Coloquemos $ n $ n\'umeros enteros positivos alrededor de una 
   circunferencia inicial. Construyamos ahora sucesivas 
   circunferencias conc\'entricas {\it hacia el exterior}, de igual 
@@ -45,6 +26,27 @@
   \emph{Restricci\'on:} el algoritmo debe ser {\it in place}. 
   \emph{Ayuda:} Pensar a la lista en un \emph{``sentido circular''}. 
   Tener cuidado al generar la diferencia correspondiente al extremo.
+  [Tomado en el 1er parcial del 21/4/2005].
+
+  keywords: lista
+
+   FIN DE DESCRIPCION */
+
+/* 
+
+  __USE_WIKI__
+  Coloquemos #n# n\'umeros enteros positivos alrededor de una 
+  circunferencia inicial. Construyamos ahora sucesivas 
+  circunferencias conc\'entricas {\it hacia el exterior}, de igual 
+  cantidad de elementos, los cuales son obtenidos restando (en valor 
+  absoluto) pares consecutivos de la \'ultima circunferencia 
+  exterior. 
+  Entonces, dada una lista #L = [ x_0, x_1, ..., x_{n-1} ]# de #n#
+  n\'umeros enteros que representan los valores iniciales alrededor de
+  la circunferencia inicial, escribir una funci\'on 
+  #int circulo(list<int> &L);# 
+  que ejecuta esta tarea y devuelva adem\'as
+  el n\'umero de circunferencias iteradas #p#
   [Tomado en el 1er parcial del 21/4/2005].
 
    FIN DE DESCRIPCION */

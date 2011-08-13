@@ -1,7 +1,52 @@
-all: junta orden_nivel random_shuffle intercala creciente ordenag cumsum cum_sum_cola particiona listarbo bilistado
+all: junta orden_nivel random_shuffle intercala creciente ordenag cumsum cum_sum_cola particiona listarbo bilistado rejunta ascendente chunk-revert circulo encuentra reemplaza concatena refina print_back sorted_list1 sorted_list2 sorted_list3 inverse apply-map areinverse
 
 junta: util.o junta.cpp
 	g++ $^ -o bin/junta.out
+
+areinverse: util.o areinverse.cpp
+	g++ $^ -o bin/areinverse.out
+
+apply-map: util.o apply-map.cpp
+	g++ $^ -o bin/apply-map.out
+
+inverse: util.o inverse.cpp
+	g++ $^ -o bin/inverse.out
+
+sorted_list1: util.o sorted_list1.cpp
+	g++ $^ -o bin/sorted_list1.out
+
+sorted_list2: util.o sorted_list2.cpp
+	g++ $^ -o bin/sorted_list2.out
+
+sorted_list3: util.o sorted_list3.cpp
+	g++ $^ -o bin/sorted_list3.out
+
+print_back: util.o print_back.cpp
+	g++ $^ -o bin/print_back.out
+
+refina: util.o refina.cpp
+	g++ $^ -o bin/refina.out
+
+concatena: util.o concatena.cpp
+	g++ $^ -o bin/concatena.out
+
+reemplaza: util.o reemplaza.cpp
+	g++ $^ -o bin/reemplaza.out
+
+encuentra: util.o encuentra.cpp
+	g++ $^ -o bin/encuentra.out
+
+circulo: util.o circulo.cpp
+	g++ $^ -o bin/circulo.out
+
+chunk-revert: util.o chunk-revert.cpp
+	g++ $^ -o bin/chunk-revert.out
+
+ascendente: util.o ascendente.cpp
+	g++ $^ -o bin/ascendente.out
+
+rejunta: util.o rejunta.cpp
+	g++ $^ -o bin/rejunta.out
 
 particiona: util.o particiona.cpp
 	g++ $^ -o bin/particiona.out

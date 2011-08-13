@@ -4,7 +4,7 @@
    COMIENZO DE DESCRIPCION
 
    Escriba una funci\'on 
-   {\tt void print_back (list<int> & L, list <int> :: iterator p)} que,
+   {\tt void print_back (list<int> \& L, list <int>::iterator p)} que,
    en forma {\it recursiva}, imprima una lista en sentido inverso, 
    es decir, desde el final al principio de la lista.  Se le da 
    como dato el procedimiento a la primera posici\'on de la lista.  

@@ -25,12 +25,12 @@ for f in handle:lines() do
 					end
 
 
-					keywords = lines:match(".*keywords:(.*)")
+					keywords = lines:match(".*keywords: (.*)")
 					if keywords then
-						for w in keywords:gmatch("%w+,") do
+						for w in keywords:gmatch("(.+), ") do
 							keys[#keys+1] = w
 						end
-						keys[#keys+1] = lines:match(".*,(.*)") or lines:match(".*:(.*)")
+						keys[#keys+1] = lines:match(".*, (.*)") or lines:match(".*: (.*)")
 						break
 					end
 

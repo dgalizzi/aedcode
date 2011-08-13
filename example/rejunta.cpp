@@ -4,7 +4,7 @@
   COMIENZO DE DESCRIPCION
 
   Usando las operaciones del TAD lista, escribir una funci\'on
-  {\tt void rejunta (list<int> &L, int A)} que, dada una lista 
+  {\tt void rejunta (list<int> \&L, int A)} que, dada una lista 
   de enteros {\tt L}, agrupe elementos de tal manera que en la
   lista queden solo elementos mayores o iguales que {\tt A}. El 
   algoritmo recorre la lista y, cuando encuentra un elemento menor,
