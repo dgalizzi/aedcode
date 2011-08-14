@@ -2,13 +2,12 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
 
-   Dado un conjunto #S# y una relacion de orden 
-   #bool comp(int x,int y)# separar #S#, segun 
-   sus clases de equivalencia en una lista #list<set<int>> L#. 
+   Dado un conjunto {\tt S} y una relacion de orden 
+   {\tt bool comp(int x,int y)} separar {\tt S}, segun 
+   sus clases de equivalencia en una lista {\tt list<set<int>> L}. 
    Signatura: 
-   #void eqclass(set<int> &S, bool (*)(int x,int y),list<set<int>> &L)#
+   {\tt void eqclass(set<int> \&S, bool (*)(int x,int y),list<set<int>> \&L)}
 
    [Tomado en el 3er parcial 2008-11-20].  
    keywords: conjunto
@@ -22,6 +21,7 @@
 #include <set>
 #include <map>
 #include <algorithm>
+#include <cstdio>
 #include "./util.h"
 
 using namespace std;

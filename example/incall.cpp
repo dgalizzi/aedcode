@@ -3,12 +3,11 @@
 /* 
    COMIENZO DE DESCRIPCION 
 
-    __USE_WIKI__
-   Dados #n# conjuntos #A_0#, #A_1#, ... #A_{n-1}# determinar si 
-   alguno de ellos (digamos #A_j# ) incluye a todos los otros. 
-   Es decir #A_j\subset A_k# para todo #k#. En ese caso, 
-   retornar el indice #j#, si no retornar -1. 
-   #int includes_all(vector< set<int> > &setv);#
+   Dados {\tt n} conjuntos $A_0$, $A_1$, ... $A_{n-1}$ determinar si 
+   alguno de ellos (digamos $A_j$ ) incluye a todos los otros. 
+   Es decir $A_j\subset A_k$ para todo {\tt k}. En ese caso, 
+   retornar el indice $j$, si no retornar -1. 
+   {\tt int includes_all(vector< set<int> > \&setv);}
    [Tomado en tercer parcial 22-NOV-2007].
    keywords: conjunto
 
@@ -19,6 +18,7 @@
 #include <vector>
 #include <set>
 #include <cassert>
+#include <cstdio>
 #include "./util.h"
 using namespace std ;
 

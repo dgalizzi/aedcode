@@ -2,13 +2,12 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
-   Dado un grafo como #map<int,set<int>> G# encontrar los subconjuntos del
-   mismo #list<set<int>> D# que estan desconectados. Por ejemplo, si 
-   #G={1->{2},2->{1},3->{4},4->{3}}#, 
-   entonces debe retornar #D=({1,2},{3,4})#. 
+   gado un grafo como {\tt map<int,set<int>> G} encontrar los subconjuntos del
+   mismo {\tt list<set<int>> D} que estan desconectados. Por ejemplo, si 
+   {\tt G={1->{2},2->{1},3->{4},4->{3}}}, 
+   entonces debe retornar {\tt D=({1,2},{3,4})}. 
    La signatura de la funcion a implementar es
-   #void connected(map<int,set<int>> &G, list<set<int>> &D);#
+   {\tt void connected(map<int,set<int>> \&G, list<set<int>> \&D);}
 
    [Tomado en el 3er parcial 2008-11-20]. 
    keywords: conjunto
@@ -22,6 +21,7 @@
 #include <set>
 #include <map>
 #include <algorithm>
+#include <cstdio>
 #include "./util.h"
 
 using namespace std;
@@ -107,7 +107,7 @@ void connected_to2(map<int,set<int> > &G,
       set<int> &ngbq = G[*q++];
       set_union(W.begin(),W.end(),
                 ngbq.begin(),ngbq.end(),
-                inserter(Wnew,sxnew.end()));
+                inserter(Wnew,Wnew.end()));
     }
     // Verifica si el acumulado crecio o no. Si no crecio
     // quiere decir que ya tenemos en `W' toda la

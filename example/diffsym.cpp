@@ -2,16 +2,15 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
    Dada una lista de conjuntos de enteros 
-   #list< set<int> > l# escribir una funci\'on 
-   #void diffsym(list< set<int> > &L, set<int> &ad)# 
-   que retorna en #ad# el conjunto de los elementos que
-   pertenecen a uno y s\'olo uno de los conjuntos de #L#. 
-   Por ejemplo, si #L = ({1,2,3},{2,4,5},{4,6})# entonces
-   #ad# debe ser #{1,3,5,6}#. Notar que si el n\'umero
-   de conjuntos en #l# es 2 y los llamamos #A# y #B#, 
-   entonces debe retornar #ad = (A-B) union (B-A)#. 
+   {\tt list< set<int> > l} escribir una funci\'on 
+   {\tt void diffsym(list< set<int> > \&L, set<int> \&ad)} 
+   que retorna en {\tt ad} el conjunto de los elementos que
+   pertenecen a uno y s\'olo uno de los conjuntos de {\tt L}. 
+   Por ejemplo, si {\tt L = ({1,2,3},{2,4,5},{4,6})} entonces
+   {\tt ad} debe ser {\tt {1,3,5,6}}. Notar que si el n\'umero
+   de conjuntos en {\tt l} es 2 y los llamamos {\tt A} y {\tt B}, 
+   entonces debe retornar {\tt ad = (A-B) union (B-A)}. 
    [Tomado en el 3er parcial 23/6/2005]. 
    keywords: conjunto
 
@@ -24,6 +23,7 @@
 #include <set>
 #include <list>
 #include <algorithm>
+#include <cstdio>
 #include "./util.h"
 
 using namespace std;

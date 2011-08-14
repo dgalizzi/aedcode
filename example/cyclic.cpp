@@ -3,23 +3,22 @@
 /* 
    COMIENZO DE DESCRIPCION 
 
-    __USE_WIKI__
-    Dada una correspondecia #M# y un elemento #x0#, podemos
-    generar una secuencia #(x0,x1,x2,...)# de la forma
-    #x_{k+1}=M(x{k})#. La secuencia se detiene cuando uno de
-    los valores #x_k# generados no pertenece a las claves de
-    #M#. En ese caso la secuencia generada es finita. Por
+    Dada una correspondecia {\tt M} y un elemento {\tt x0}, podemos
+    generar una secuencia {\tt (x0,x1,x2,...)} de la forma
+    {\tt x_{k+1}=M(x{k})}. La secuencia se detiene cuando uno de
+    los valores {\tt x_k} generados no pertenece a las claves de
+    {\tt M}. En ese caso la secuencia generada es finita. Por
     otra parte, puede ocurrir que un elemento de la
-    secuencia se repita, es decir #x_{k+m}=x_k# con
-    #m>0#. Es obvio que, a partir de alli la secuencia se va
+    secuencia se repita, es decir {\tt x_{k+m}=x_k} con
+    {\tt m>0}. Es obvio que, a partir de alli la secuencia se va
     a repetir indefinidamente. _Consigna:_ escribir una
     Escribir una funcion 
-    #void cyclic(map<int,int> &M,list<int> &L);# 
-    que extrae en #L# todas aquellas
-    claves de #M# que generan una secuencia ciclica
+    {\tt void cyclic(map<int,int> \&M,list<int> \&L);} 
+    que extrae en {\tt L} todas aquellas
+    claves de {\tt M} que generan una secuencia ciclica
     infinita. Por ejemplo, si
-    #M={(1,2),(2,5),(3,4),(4,6),(5,2)}# entonces
-    #cyclic(M,L)# debe retornar #L=(1,2,5)#.
+    {\tt M={(1,2),(2,5),(3,4),(4,6),(5,2)}} entonces
+    {\tt cyclic(M,L)} debe retornar {\tt L=(1,2,5)}.
     [Tomado en 1er parcial  25-SEP-2008].
     keywords: correspondencia, lista
 
@@ -29,6 +28,7 @@
 #include <cstdio>
 #include <list>
 #include <map>
+#include "util.h"
 using namespace std ;
 
 //---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>

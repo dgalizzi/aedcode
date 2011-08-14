@@ -3,15 +3,14 @@
 /* 
    COMIENZO DE DESCRIPCION 
    
-   __USE_WIKI__
    Implemente una funci\'on
-   #void intersect_map(map< string,list<int> > &A,#
-   #map< string, list<int> > &B,map< string, list<int> > &C)#
-   que a partir de los diccionarios #A# y #B# construye un 
-   diccionario #C# de manera que las claves de #C# son la
-   interseccion de las claves de #A# y #B# y para cada clave #k# en
-   #C# la imagen #C[k]# es la interseccion de los valores en 
-   #A[k]# y #B[k]#. 
+   {\tt void intersect_map(map< string,list<int> > \&A,}
+   {\tt map< string, list<int> > \&B,map< string, list<int> > \&C)}
+   que a partir de los diccionarios {\tt A} y {\tt B} construye un 
+   diccionario {\tt C} de manera que las claves de {\tt C} son la
+   interseccion de las claves de {\tt A} y {\tt B} y para cada clave {\tt k} en
+   {\tt C} la imagen {\tt C[k]} es la interseccion de los valores en 
+   {\tt A[k]} y {\tt B[k]}. 
    [Tomado en Primer Parcial 17-SET-2009].
    keywords: correspondencia, lista
    

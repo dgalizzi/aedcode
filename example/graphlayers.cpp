@@ -3,16 +3,15 @@
 /* 
    COMIENZO DE DESCRIPCION 
    
-   __USE_WIKI__
-   Dado un grafo #vector<set<int>> G# y un vertice de
-   partida #x# se desea determinar la estructuras de capas
-   de vecinos de #G# alrededor de #x# definida de la
-   siguiente forma: la capa 0 es #{x}#, la capa 1 son los
-   vecinos de #x#. A partir de alli la capa #n>=2# esta
-   formada por los vecinos de los nodos de la capa #n-1#
-   (es decir la _adyacencia_ de la capa) pero que no estan
+   Dado un grafo {\tt vector<set<int>> G} y un vertice de
+   partida {\tt x} se desea determinar la estructuras de capas
+   de vecinos de {\tt G} alrededor de {\tt x} definida de la
+   siguiente forma: la capa 0 es {\tt {x}}, la capa 1 son los
+   vecinos de {\tt x}. A partir de alli la capa {\tt n>=2} esta
+   formada por los vecinos de los nodos de la capa {\tt n-1}
+   (es decir la adyacencia de la capa) pero que no estan
    en las capas anteriores (en realidad basta con verificar
-   que no esten en las capas #n-1# ni #n-2#). 
+   que no esten en las capas {\tt n-1} ni {\tt n-2}). 
    [Tomado en tercer parcial 22-NOV-2007].
    keywords: conjunto
     
@@ -22,6 +21,7 @@
 #include <iostream>
 #include <vector>
 #include <set>
+#include <cstdio>
 #include "./util.h"
 using namespace std ;
 

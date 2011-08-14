@@ -2,19 +2,18 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
-   Escribir una funci\'on #bool es_biyectiva (map <int,int> &A)#
+   Escribir una funci\'on {\tt bool es_biyectiva (map <int,int> \&A)}
    que retorna true si la misma representa una funci\'on biyectiva,
-   esto es, si la correspondencia #A# describe una relaci\'on
+   esto es, si la correspondencia {\tt A} describe una relaci\'on
    {\it uno a uno}. Por ejemplo, supongamos el conjunto 
-   #X = (0,1,2,3,4,5)# y consideremos las correspondencias
-   #A1 = { (0,2), (1,5), (2,0), (3,3), (4,4), (5,1) }# y
-   #A2 = { (0,2), (1,1), (2,0), (3,3), (4,3), (5,1) }#. 
+   {\tt X = (0,1,2,3,4,5)} y consideremos las correspondencias
+   {\tt A1 = { (0,2), (1,5), (2,0), (3,3), (4,4), (5,1) }} y
+   {\tt A2 = { (0,2), (1,1), (2,0), (3,3), (4,3), (5,1) }}. 
    En el primer caso, cada elemento (de 0 a 5) tiene preimagen, 
-   por lo que #es_biyectiva (A1)# debe retornar #true#.
+   por lo que {\tt es_biyectiva (A1)} debe retornar {\tt true}.
    En cambio, en el segundo caso, los elementos 4 y 5 no tienen 
-   preimagen, por lo que #es_biyectiva (A2)# debe retornar 
-   #false#.
+   preimagen, por lo que {\tt es_biyectiva (A2)} debe retornar 
+   {\tt false}.
    keywords: correspondencia
 
    FIN DE DESCRIPCION */

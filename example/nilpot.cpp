@@ -2,16 +2,15 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
-   Dada una correspondencia #M# tal que el 
+   Dada una correspondencia {\tt M} tal que el 
    conjunto de sus valores es igual al conjunto 
-   de sus claves, encontrar el \'i{}ndice 
+   de sus claves, encontrar el \'indice 
    nilpotente, de la misma, es decir el n\'umero de 
-   veces #n# que hay que componerla consigo misma 
-   hasta llegar a la identidad, es decir #M^n = I#. 
+   veces {\tt n} que hay que componerla consigo misma 
+   hasta llegar a la identidad, es decir $M^n = I$. 
    _Consigna:_  Escribir una funci\'on
-   #int nilpot(map<int,int> &M);# que dada una correspondencia
-   #M# retorna el m\'\i{}nimo entero \verb+n+ tal que #M^n=I#.
+   {\tt int nilpot(map<int,int> \&M);} que dada una correspondencia
+   {\tt M} retorna el m\'inimo entero \verb+n+ tal que $M^n=I$.
    [Tomado en el 1er parcial 21/4/2005]. 
    keywords: correspondencia
 
@@ -62,6 +61,7 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+#include <cstdio>
 
 using namespace std ;
 

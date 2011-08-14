@@ -3,11 +3,10 @@
 /* 
    COMIENZO DE DESCRIPCION 
 
-    __USE_WIKI__
     Escribir una funci\'on predicado
-    #bool is_mapped_set(set<int> &A,set<int> &B,int (*mapfun)(int));#
-    que retorna verdadero si el conjunto #B# contiene los elementos
-    de #A#, mapeados via la funcion #mapfun#. 
+    {\tt bool is_mapped_set(set<int> \&A,set<int> \&B,int (*mapfun)(int));}
+    que retorna verdadero si el conjunto {\tt B} contiene los elementos
+    de {\tt A}, mapeados via la funcion {\tt mapfun}. 
     [Tomado en recuperatorio 29-NOV-2007].
     keywords: conjunto
 
@@ -17,6 +16,7 @@
 #include <iostream>
 #include <vector>
 #include <set>
+#include <cstdio>
 using namespace std ;
 
 //---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>

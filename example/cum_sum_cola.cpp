@@ -2,20 +2,14 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-  __USE_WIKI__
   Escribir una funci\'on 
-  #void cum_sum_cola (queue<int> &Q)# que modifica a la 
-  cola #Q# dejando la suma acumulada de sus elementos, es 
-  decir, si los elementos de #Q# antes de llamar a 
-  #cum_sum_cola(Q)# son #Q = (a_0,a_1,...,a_{n-1})#, 
-  entonces despu\'es de llamar a #cum_sum_cola(Q)# debe 
-  quedar #Q = (a_0, a_0 + a_1, ..., a_0 + a_1 + ... + a_n)#. 
-  [Tomado en el Primer Parcial 27-ABR-2004]
-   keywords: cola
+  {\tt void cum_sum_cola (queue<int> \&Q)} que modifica a la 
+  cola {\tt Q} dejando la suma acumulada de sus elementos, es 
+  decir, si los elementos de {\tt Q} antes de llamar a 
+  {\tt cum_sum_cola(Q)} son {\tt Q = (a_0,a_1,...,a_{n-1})}, 
+  entonces despu\'es de llamar a {\tt cum_sum_cola(Q)} debe 
+  quedar {\tt Q = (a_0, a_0 + a_1, ..., a_0 + a_1 + ... + a_n)}. 
 
-   FIN DE DESCRIPCION */
-
-/*
   Por ejemplo, si {\tt Q = (1,3,2,4,2)} entonces despu\'es de hacer
   {\tt cum\_sum\_cola (Q)} debe quedar {\tt Q = (1,4,6,10,12)}. 
   Restricciones: (i) usar una cola auxiliar; (ii) usar la interfase 
@@ -23,7 +17,11 @@
   size (), empty ()}); (iii) NO usar m\'as estructuras auxiliares 
   que la indicada ni otros algoritmos de STL; y (iv) el algoritmo 
   debe ser $O(n)$. 
-*/
+  [Tomado en el Primer Parcial 27-ABR-2004]
+   keywords: cola
+
+   FIN DE DESCRIPCION */
+
 // -----------------------------------------------------------------
 // INTEL: icc -v -w -c cum_sum_cola.cpp
 //        icc -v -w -o cum_sum_cola.exe cum_sum_cola.o

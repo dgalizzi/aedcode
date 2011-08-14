@@ -3,12 +3,11 @@
 /* 
    COMIENZO DE DESCRIPCION 
 
-    __USE_WIKI__
    Una correspondencia es una _permutacion_ si el conjunto de
    los elementos del dominio (las claves) es igual al del contradominio
    (los valores). Consigna: escribir una funcion
-   predicado #bool es_permutacion(map<int,int> &M)# que retorna
-   #true# si #M# es una permutacion y #false# si no lo es.
+   predicado {\tt bool es_permutacion(map<int,int> \&M)} que retorna
+   {\tt true} si {\tt M} es una permutacion y {\tt false} si no lo es.
    [Tomado en Primer Parcial 27-SET-2007].
    keywords: correspondencia
 
@@ -17,6 +16,7 @@
 // -----------------------------------------------------------------
 #include <iostream>
 #include <map>
+#include <cstdio>
 using namespace std ;
 
 bool es_permut(map<int,int> &M) {

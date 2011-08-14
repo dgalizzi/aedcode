@@ -1,16 +1,15 @@
 // $Id$
 /* COMIENZO DE DESCRIPCION
 
-   __USE_WIKI__
-   El #cumsum(v)# de un vector #v# es la suma acumulada, es
-   decir en la posicion #v[j]# debe quedar la suma de los
-   elementos de #v[0..j]#. Para un arbol lo podemos extender
+   El {\tt cumsum(v)} de un vector {\tt v} es la suma acumulada, es
+   decir en la posicion {\tt v[j]} debe quedar la suma de los
+   elementos de {\tt v[0..j]}. Para un arbol lo podemos extender
    diciendo que en cada nodo del arbol queda la suma de los
    valores de los nodos de su subarbol ANTES de la
-   operacion. Por ejemplo si #T=(1 (2 (3 4 5 6))))# entonces
-   despues de #cumsum(T)# debe quedar #T=(21 (2 (18 4 5
-   6))))#. La version hacia abajo corresponde a que en cada camino
-   #n0,n1,...,nk# queden los valores #cumsum[*n0,*n1,...,*nk]#. 
+   operacion. Por ejemplo si {\tt T=(1 (2 (3 4 5 6))))} entonces
+   despues de {\tt cumsum(T)} debe quedar {\tt T=(21 (2 (18 4 5
+   6))))}. La version hacia abajo corresponde a que en cada camino
+   {\tt n0,n1,...,nk} queden los valores {\tt cumsum[*n0,*n1,...,*nk]}. 
    keywords: arbol orientado
 
   FIN DE DESCRIPCION */

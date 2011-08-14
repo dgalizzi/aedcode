@@ -1,12 +1,11 @@
 // $Id$
 /* COMIENZO DE DESCRIPCION
 
-   __USE_WIKI__
-   Dado un grafo #G#, y un arbol #T#, decimos que #T# "expande" a
-   #G# si la raiz #n# de #T# es un vertice de #G#, y los caminos de
-   #T# permiten llegar desde #n# hasta cualquier otro nodo de #G#.
-   Escribir una funcion #bool is_spng_tree(G,T)# (por
-   "is-spanning-tree") que determina si #T# expande a #G#.
+   Dado un grafo {\tt G}, y un arbol {\tt T}, decimos que {\tt T} "expande" a
+   {\tt G} si la raiz {\tt n} de {\tt T} es un vertice de {\tt G}, y los caminos de
+   {\tt T} permiten llegar desde {\tt n} hasta cualquier otro nodo de {\tt G}.
+   Escribir una funcion {\tt bool is_spng_tree(G,T)} (por
+   "is-spanning-tree") que determina si {\tt T} expande a {\tt G}.
    [Tomado en el 3er parcial del 2009-11-27].
    keywords: conjunto, correspondencia
 
@@ -20,7 +19,7 @@
 #include <set>
 #include <algorithm>
 #include "./util.h"
-#include "./tree.h"
+#include "../include/tree.h"
 #include "./util_tree.h"
 
 using namespace aed;

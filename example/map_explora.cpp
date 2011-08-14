@@ -1,17 +1,6 @@
 // $Id$
 /* COMIENZO DE DESCRIPCION 
 
-  __USE_WIKI__
-  Consigna: usando las operaciones de los TAD lista, mapeo y cola, 
-  escribir un procedimiento 
-  #void map_explora(vector<list<int> > &V, map<int,int> &M)#, 
-  en el cual, dada una red de #n# computadoras representada por un 
-  vector de listas de enteros #V#, construya dicho mapeo #M#.
-  keywords: lista, cola, correspondencia
-
-  FIN DE DESCRIPCION */
-
-/* 
    Considere una red de $n$ computadoras enumeradas $ i=0,1,...(n-1) $ 
    las cuales pueden estar conectadas entre si de diversas maneras. 
    Dicha informaci\'on de la interconexi\'on se la puede almacenar 
@@ -41,7 +30,18 @@
    }
    en el cual, dada una red de $n$ computadoras representada por un 
    vector de listas de enteros {\tt V}, construya dicho mapeo $ M $.
-   keywords: lista, cola, correspondencia 
+   keywords: lista, cola, correspondencia
+
+  FIN DE DESCRIPCION */
+
+/* 
+  __USE_WIKI__
+  Consigna: usando las operaciones de los TAD lista, mapeo y cola, 
+  escribir un procedimiento 
+  #void map_explora(vector<list<int> > &V, map<int,int> &M)#, 
+  en el cual, dada una red de #n# computadoras representada por un 
+  vector de listas de enteros #V#, construya dicho mapeo #M#.
+  keywords: lista, cola, correspondencia
 */
 
 // -----------------------------------------------------------------

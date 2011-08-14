@@ -27,15 +27,19 @@ for f in handle:lines() do
 
 					keywords = lines:match(".*keywords: (.*)")
 					if keywords then
-						for w in keywords:gmatch("(.+), ") do
+						for w in keywords:gmatch("(.-), ") do
 							keys[#keys+1] = w
 						end
 						keys[#keys+1] = lines:match(".*, (.*)") or lines:match(".*: (.*)")
 						break
 					end
 
-					line_underscore_hacked = lines:gsub("_", "\\_")
-					descr = descr .. line_underscore_hacked
+					line_underscore_hacked = lines:gsub("([^\\])_", "%1\\_")
+					if not lines:match(".*$.*") then
+						descr = descr .. line_underscore_hacked
+					else
+						descr = descr .. lines
+					end
 				elseif lines:match(".*COMIENZO.*") ~= nil then
 					pr = true
 				end

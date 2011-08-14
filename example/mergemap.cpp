@@ -3,17 +3,16 @@
 /* 
    COMIENZO DE DESCRIPCION 
 
-    __USE_WIKI__
-    Dadas dos correspondencias #A# y #B#, que asocian
+    Dadas dos correspondencias {\tt A} y {\tt B}, que asocian
     enteros con listas ordenada de enteros, escribir una
     funcion 
-    #void merge_map(map<int,list<int>> &A, map<int,list<int>> &B, map<int,list<int>> &C)# que
-    devuelve en #C# una correspondencia que asigna al
-    elemento #x# la fusion ordenada de las dos listas #A[x]#
-    y #B[x]#. Si #x# no es clave de #A#, entonces #C[x]#
-    debe ser #B[x]# y viceversa. Por ejemplo:
-    si #M={(1,2),(2,5),(3,4),(4,6),(5,2)}# entonces #cyclic(M,L)#
-    debe dejar #L=(1,2,5)#. 
+    {\tt void merge_map(map<int,list<int>> \&A, map<int,list<int>> \&B, map<int,list<int>> \&C)} que
+    devuelve en {\tt C} una correspondencia que asigna al
+    elemento {\tt x} la fusion ordenada de las dos listas {\tt A[x]}
+    y {\tt B[x]}. Si {\tt x} no es clave de {\tt A}, entonces {\tt C[x]}
+    debe ser {\tt B[x]} y viceversa. Por ejemplo:
+    si {\tt M={(1,2),(2,5),(3,4),(4,6),(5,2)}} entonces {\tt cyclic(M,L)}
+    debe dejar {\tt L=(1,2,5)}. 
     [Tomado en 1er parcial  25-SEP-2008].
     keywords: correspondencia, lista
 

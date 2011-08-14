@@ -2,10 +2,9 @@
 
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
    Escribir un predicado
-   #bool incluido(set<int> &A, set<int> &B);# que retorna verdadero
-   si y solo si #A# esta incluido en #B#. 
+   {\tt bool incluido(set<int> \&A, set<int> \&B);} que retorna verdadero
+   si y solo si {\tt A} esta incluido en {\tt B}. 
    [Tomado en el 3er parcial 23/6/2005]. 
    keywords: conjunto
 
@@ -15,6 +14,7 @@
 #include <set>
 #include <list>
 #include <algorithm>
+#include <cstdio>
 #include "./util.h"
 
 using namespace std;

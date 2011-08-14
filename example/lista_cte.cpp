@@ -1,13 +1,12 @@
 // $Id$
 /* COMIENZO DE DESCRIPCION 
 
-   __USE_WIKI__
-   Dada una lista #L# de enteros escribir una funci\'on 
-   #bool es_constante (list <int> &L)#
+   Dada una lista {\tt L} de enteros escribir una funci\'on 
+   {\tt bool es_constante (list <int> \&L)}
    que retorna true solo si todos sus elementos son iguales.
    Hacerlo con (i) s\'olo operaciones del TAD lista y (ii) 
    mediante una correspondencia.
-   Escriba un procedimiento #void imprime (map <int,int> &M);#
+   Escriba un procedimiento {\tt void imprime (map <int,int> \&M);}
    para imprimir una correspondencia.
    keywords: lista, correspondencia
 

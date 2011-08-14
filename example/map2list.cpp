@@ -3,15 +3,14 @@
 /* 
    COMIENZO DE DESCRIPCION 
    
-   __USE_WIKI__
-   Escribir las funciones #map2list()#
-   y #list2map()# de acuerdo a las siguientes especificaciones. 
-   #void map2list(map<int,int> &M,list<int> &keys,list<int> &vals);#
-   dado un map #M# retorna las listas de claves y valores. 
-   #void list2map(list<int> &keys,list<int> &vals,map<int,int> &M);#
-   dadas las listas de claves #(k1,k2,k3...)# y valores #(v1,v2,v3...)#
-   retorna el map #M# con las asignaciones correspondientes
-   #{(k1,v1),(k2,v2),(k3,v3),...}#.  (Nota: Si hay
+   Escribir las funciones {\tt map2list()}
+   y {\tt list2map()} de acuerdo a las siguientes especificaciones. 
+   {\tt void map2list(map<int,int> \&M,list<int> \&keys,list<int> \&vals);}
+   dado un map {\tt M} retorna las listas de claves y valores. 
+   {\tt void list2map(list<int> \&keys,list<int> \&vals,map<int,int> \&M);}
+   dadas las listas de claves {\tt (k1,k2,k3...)} y valores {\tt (v1,v2,v3...)}
+   retorna el map {\tt M} con las asignaciones correspondientes
+   {\tt {(k1,v1),(k2,v2),(k3,v3),...}}.  (Nota: Si hay
    *claves repetidas*, solo debe quedar la asignacion
    correspondiente a la *ultima* clave en la lista. Si hay menos
    valores que claves, utilizar cero como valor. Si hay mas valores

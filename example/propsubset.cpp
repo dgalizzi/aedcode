@@ -2,14 +2,13 @@
 
 /* COMIENZO DE DESCRIPCION
    
-  __USE_WIKI__
    Dada una lista de conjuntos
-  #list< set<int> > L#, escribir una funci\'on predicado 
-  #bool proper_subset(list< set<int> > &L)#, que determina si los
-  conjuntos de la lista #L# son subconjuntos propios en forma
-  consecutiva. Es decir, si #L = (A_0, A_1, ...., A_{n-1})#, 
-  determinar si #A_j# es subconjunto propio de #A_{j+1}#, 
-  para #j=0,...,n-2#. 
+   {\tt list< set<int> > L}, escribir una funci\'on predicado 
+   {\tt bool proper_subset(list< set<int> > \&L)}, que determina si los
+  conjuntos de la lista {\tt L} son subconjuntos propios en forma
+  consecutiva. Es decir, si $L = (A_0, A_1, ...., A_{n-1})$, 
+  determinar si $A_j$ es subconjunto propio de $A_{j+1}$, 
+  para $j=0,...,n-2$. 
   [Tomado en el examen final 7/7/2005]. 
   keywords: conjunto
 
@@ -20,6 +19,7 @@
 #include <set>
 #include <list>
 #include <algorithm>
+#include <cstdio>
 #include "./util.h"
 
 using namespace std;
