@@ -50,7 +50,7 @@ public:
 		// Tener en cuenta que la lista es simplemente enlazada,
 		// por lo tanto no se guarda un puntero a la celda anterior,
 		// sólamente a la siguiente, por lo tanto no podríamos insertar
-		// detrás de un iterador sin este 'truquito'.
+		// detrás de un iterador sin este 'truquito' (al menos no en O(1)).
 		//
 		// En las listas doblemente enlazadas, esto no se hace,
 		// ya que sí se tiene un puntero a la celda anterior.
