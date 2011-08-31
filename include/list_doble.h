@@ -153,10 +153,13 @@ public:
 	// al que apunta q. q puede ser end, en este caso
 	// el elemento data se agregará al final de la lista.
 	iterator insert(iterator q, const T &data) {
+		// Se crea una nueva celda, donde su elemnto anterior
+		// es el anterior a q. Y su elemento siguente es q.
 		cell *c = new cell(q.ptr->prev, q.ptr, data);
-		c->prev->next = c;
-		c->next->prev = c;
-		return iterator(c);
+
+		c->prev->next = c; // El siguiente del anterior, es la celda nueva
+		c->next->prev = c; // El anterior del siguiente, es la celda nueva
+		return iterator(c); // Se devuelve un iterador al elemento recién creado
 	}
 
 	// Elimina de la lista el elemento apuntado por q.
