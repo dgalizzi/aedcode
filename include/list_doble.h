@@ -1,5 +1,6 @@
 #ifndef AED_LIST_DOBLE
 #define AED_LIST_DOBLE
+#include <cassert>
 
 // Lista doblemente enlazada
 namespace aed {
@@ -41,12 +42,10 @@ private:
 		cell(cell *_prev, cell *_next, T _t) : prev(_prev), next(_next), t(_t) { }
 	};
 
-	// Punteros a celdas auxiliares.
-	// head es un puntero al primer elemento de la lista.
-	// tail es un puntero a un elemento _placeholder_, simplemente nos sirve
-	// para marcar el final de la lista.
-	// Si la lista está vacía, tanto head como tail apuntan al mismo elemento.
-	cell *head, *tail;
+	// head es un elemento _placeholder_, simplemente nos sirve
+	// para marcar el principio/final de la lista.
+	// En informática se lo suele denominar como 'centinela' (sentinel).
+	cell head;
 
 public:
 	// Implementación de la clase iterator
@@ -117,8 +116,9 @@ public:
 
 	// Constructor
 	list() {
-		tail = new cell(); // placeholder (marcador de posición)
-		head = tail;
+		// placeholder (marcador de posición)
+		head.next = &head;
+		head.prev = &head;
 	}
 
 	// Destructor
@@ -127,67 +127,51 @@ public:
 		// donde cada uno hace el delete correspondiente, liberando
 		// correctamente la memoria alocada dinámicamente.
 		clear();
-
-		// Se elimina el placeholder.
-		delete tail;
 	}
 
 	// Devuelve un iterator al primer elemento de la lista.
 	// Notar que dicho iterator se puede derreferenciar para obtener el valor
 	// del primer elemento.
-	iterator begin() { return iterator(head); } 
+	iterator begin() { return iterator(head.next); } 
 
 	// Devuelve un iterator al elemento *siguiente* al último de la lista.
 	// Este iterator actúa como marcador de posición y no puede ser derreferenciado.
-	iterator end()   { return iterator(tail); }
+	iterator end()   { return iterator(&head); }
 
-	T& front() { return head->t; } // Devuelve una referencia al primer elemento.
-	T& back()  { return tail->prev->t ; } // Devuelve una referencia al último elemento.
+	T& front() { return head.next->t; }       // Devuelve una referencia al primer elemento.
+	T& back()  { return head.prev->t ; }      // Devuelve una referencia al último elemento.
 	bool empty() { return begin() == end(); } // Devuelve true si la lista está vacía.
 
 	// Métodos auxiliares, notar que todos se pueden hacer
 	// con un simple insert/erase.
-	void push_front(T data) { insert(begin(), data); } // Agrega un elemento al principio de la lista
-	void push_back(T data)  { insert(end(), data); } // Agrega un elemento al final de la lista
-	void pop_front()        { erase(begin()); } // Elimina el primer elemento de la lista
-	void pop_back()         { erase(iterator(tail->prev)); } // Elimina el último elemento de la lista
+	void push_front(T data) { insert(begin(), data); }      // Agrega un elemento al principio de la lista
+	void push_back(T data)  { insert(end(), data); }        // Agrega un elemento al final de la lista
+	void pop_front()        { erase(begin()); }             // Elimina el primer elemento de la lista
+	void pop_back()         { erase(iterator(head.prev)); } // Elimina el último elemento de la lista
 
 	// Inserta el elemento data justo detrás del elemento
-	// al que apunta p. p puede ser end, en este caso
+	// al que apunta q. q puede ser end, en este caso
 	// el elemento data se agregará al final de la lista.
-	iterator insert(iterator p, T data) {
-		cell *c;
-		if (empty()) {
-			c = new cell(NULL, tail, data);
-			tail->prev = c;
-			head = c;
-		} else {
-			c = new cell(p.ptr->prev, p.ptr, data);
-
-			if (c->prev == NULL)  head = c;
-			else c->prev->next = c;
-
-			c->next->prev = c;
-			p.ptr->prev = c;
-		}
+	iterator insert(iterator q, const T &data) {
+		cell *c = new cell(q.ptr->prev, q.ptr, data);
+		c->prev->next = c;
+		c->next->prev = c;
 		return iterator(c);
 	}
 
-	// Elimina de la lista el elemento apuntado por p.
+	// Elimina de la lista el elemento apuntado por q.
 	// El iterador pasado como parámetro resulta inválido,
 	// por lo tanto, no debe ser derreferenciado.
-	// Devuelve el iterador que le sigue a p.
-	iterator erase(iterator p) {
-		assert(p != end());
-		if (p.ptr != head)
-			p.ptr->prev->next = p.ptr->next;
-		else
-			head = p.ptr->next;
-		p.ptr->next->prev = p.ptr->prev;
-		iterator c = iterator(p.ptr->next);
-		delete p.ptr;
+	// Devuelve el iterador que le sigue a q.
+	iterator erase(iterator q) {
+		assert(q != end());
 
-		return c;
+		cell* p = q.ptr->prev; // Anterior
+		cell* n = q.ptr->next; // Siguiente
+		delete q.ptr;
+		p->next = n; // El siguiente del anterior, es el anterior
+		n->prev = p; // El anterior del siguiente, es el anterior
+		return iterator(n); // Devolver el siguiente
 	}
 
 	// Eliminar el rango [p, q), es decir, elimina

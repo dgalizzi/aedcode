@@ -1,4 +1,4 @@
-#include "../src/include/list.h"
+#include "../include/list_doble.h"
 
 TEST_CASE("aed::list", "Probar la lista doblemente enlazada")
 {
