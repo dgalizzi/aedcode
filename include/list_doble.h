@@ -152,6 +152,7 @@ public:
 	// Inserta el elemento data justo detrás del elemento
 	// al que apunta q. q puede ser end, en este caso
 	// el elemento data se agregará al final de la lista.
+	// Ningún iterator resulta invalidado.
 	iterator insert(iterator q, const T &data) {
 		// Se crea una nueva celda, donde su elemnto anterior
 		// es el anterior a q. Y su elemento siguente es q.
