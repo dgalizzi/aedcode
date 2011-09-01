@@ -163,8 +163,7 @@ public:
 	}
 
 	// Elimina de la lista el elemento apuntado por q.
-	// El iterador pasado como parámetro resulta inválido,
-	// por lo tanto, no debe ser derreferenciado.
+	// El iterador pasado como parámetro resulta inválido.
 	// Devuelve el iterador que le sigue a q.
 	iterator erase(iterator q) {
 		assert(q != end());
