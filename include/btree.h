@@ -37,7 +37,7 @@ public:
 		friend class btree;
 		cell *ptr,*father;
 		side_t side;
-		iterator(cell *p,side_t side_a,cell *f_a) : ptr(p), side(side_a), father(f_a) { }
+		iterator(cell *p,side_t side_a,cell *f_a) : ptr(p), father(f_a), side(side_a)  { }
 	public:
 		iterator(const iterator &q) {
 			ptr = q.ptr;
