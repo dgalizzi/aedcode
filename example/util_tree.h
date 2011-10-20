@@ -81,6 +81,29 @@ namespace aed {
   typedef tree<int>::iterator node_t;
   void print_tree(tree<int> &T,node_t n,string pre,string c);
   void print_tree(tree<int> &T);
+  int readnum(string &s, unsigned int &n);
+  /*
+     La siguiente función NO es a prueba de errores, y asume cierta sintaxis que
+     si no se respeta el resultado es indefinido.
+     Se asume que:
+     - La notación corresponde a un árbol válido.
+
+     - Siempre después de un '(' hay un número. Es decir, después de abrir
+     paréntesis, no se puede cerrar un paréntesis, ni tampoco abrir otro.
+     Los siguientes strings son inválidos:
+     "(1 2 () 3)"
+     "(1 2 ((3) 4) 5)"
+
+     - El string no termina con espacios, es decir, el
+     siguiente string es inválido:
+     "(1 (2 3) 4) "
+     Notar que al final hay un espacio.
+
+     - Los enteros están dentro del rango válido del int,
+     no hay verificación contra overflow de enteros.
+   */
+  void lisp2tree(string s, tree<int> &T, unsigned int &i, tree<int>::iterator it);
+  void lisp2tree(string s, tree<int> &T);
 
   void list2treev(tree<int> &T,int TERM,int BP,
                   int EP,va_list elems);
