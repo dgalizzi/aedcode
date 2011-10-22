@@ -10,8 +10,11 @@
 #define AED_TREETOOLS_H
 
 #include "./util.h"
+#include "tree.h"
+#include "btree.h"
 
 namespace aed {
+using namespace std;
 
   // -------------------------------------------------------------
   template <typename elem_t>
@@ -104,6 +107,9 @@ namespace aed {
    */
   void lisp2tree(string s, tree<int> &T, unsigned int &i, tree<int>::iterator it);
   void lisp2tree(string s, tree<int> &T);
+
+  void lisp2btree(string s, btree<int> &T, unsigned int &i, btree<int>::iterator it);
+  void lisp2btree(string s, btree<int> &T);
 
   void list2treev(tree<int> &T,int TERM,int BP,
                   int EP,va_list elems);

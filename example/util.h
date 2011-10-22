@@ -17,6 +17,7 @@
 #include <queue>
 #include <set>
 #include <algorithm>
+#include <sstream>
 
 // -----------------------------------------------------------------
 // generates a double random between 0.0 <= d < 1.00
@@ -138,6 +139,8 @@ void add_to_list(std::list<int> &L,int term,va_list elems);
 void add_to_set(std::set<int> &L,int term,...);
 void add_to_set(std::set<int> &L,int term,va_list elems);
 
+// crea una lista a partir de un string espaciado
+void string2list(std::string s, std::list<int> &L);
 #endif
 // -----------------------------------------------------------------
 

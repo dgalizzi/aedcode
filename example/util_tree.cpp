@@ -112,6 +112,39 @@ void lisp2tree(string s, tree<int> &T)
 	lisp2tree(s, T, i, T.begin());
 }
 
+void lisp2btree(string s, btree<int> &T, unsigned int &i, btree<int>::iterator it)
+{
+	while (i < s.size())
+	{
+		while (s[i] == ' ') ++ i;
+
+		if (s[i] == '(')
+		{
+			++ i;
+			it = T.insert(it, readnum(s, i));
+
+			lisp2btree(s, T, i, it.left());
+			lisp2btree(s, T, i, it.right());
+		}
+		else if (s[i] == ')' || s[i] == '.')
+		{
+			++ i;
+			return;
+		}
+		else
+		{
+			T.insert(it, readnum(s, i));
+			return;
+		}
+	}
+}
+
+void lisp2btree(string s, btree<int> &T)
+{
+	unsigned int i = 0;
+	lisp2btree(s, T, i, T.begin());
+}
+
 //---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>
 void list2treev(tree<int> &T,int TERM,int BP,
 		int EP,va_list elems) {

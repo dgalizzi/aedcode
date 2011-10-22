@@ -125,3 +125,13 @@ void add_to_set(set<int> &s,int term,...) {
 	va_start (elems,term);
 	add_to_set(s,term,elems);
 }
+
+//---:---<*>---:---<*>---:---<*>---:---<*>---:---<*>
+void string2list(string s, list<int> &L)
+{
+	istringstream is(s);
+	int n;
+	while (is >> n)
+		L.push_back(n);
+}
+
